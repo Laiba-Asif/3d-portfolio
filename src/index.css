@@ -375,6 +375,7 @@ body::-webkit-scrollbar {
   height: 100%;
   background-color: #000;
   will-change: clip-path;
+  z-index: 10;
 }
 .trail-img .mask-layer .image-layer{
   position: absolute;
@@ -384,6 +385,7 @@ body::-webkit-scrollbar {
   height: 100%;
   background-size: cover;
   background-position: center;
+  z-index: 10;
   /* will-change: transform;
   transform-origin: center center; */
 }

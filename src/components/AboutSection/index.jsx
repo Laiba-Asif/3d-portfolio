@@ -1,7 +1,7 @@
 import React from "react";
 import Svgs from "../helpers/svgs";
 import GradientSphere from "../GradientSpheres";
-import TrailContainer from "./TrailContainer";
+import TrailContainer from "../helpers/TrailContainer";
 
 const skills = [
   [{ name: "React" }, { level: 90 }],

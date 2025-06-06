@@ -2,10 +2,11 @@ import React from "react";
 import GradientSphere from "../GradientSpheres";
 import HeroExperience from "./HeroExperience";
 import Navbar from "../Header/Navbar";
+import TrailContainer from "../helpers/TrailContainer";
 
 const Hero = () => {
   return (
-    <section id="home" className="h-screen relative px-5 max-md:px-0 ">
+    <section id="home" className="h-screen relative px-5 max-md:px-0  ">
       <Navbar/>
       <GradientSphere
         sphere1class={"gradient-sphere sphere-1"}
@@ -17,11 +18,11 @@ const Hero = () => {
             alt="mr peabody"
             className=" h-[10rem] absolute top-0  left-0"
           />
-      <div className="w-full h-full flex-center">
+      <div className="w-full h-full flex-center z-30">
         <div className="container relative w-full h-full ">
-          <div className="md:mt-40 mt-32 relative ml-20  blackops ">
-            <h1 className="font-bold md:text-9xl text-5xl">LAIBA ASIF</h1>
-            <h1 className="font-bold md:text-9xl text-5xl">FRONTEND</h1>
+          <div className="md:mt-40 mt-32 relative ml-20 z-20 blackops ">
+            <h1 className="font-bold md:text-9xl text-5xl ">LAIBA ASIF</h1>
+            <h1 className="font-bold md:text-9xl text-5xl ">FRONTEND</h1>
           </div>
 
           <div className="absolute w-full z-30 bottom-20 right-0 blackops">
@@ -41,9 +42,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="w-full min-h-[100vh] absolute inset-0">
+      <TrailContainer />
+      <div className="w-full min-h-[100vh] absolute inset-0 z-20">
         <HeroExperience/>
       </div>
+        
     </section>
   );
 };
