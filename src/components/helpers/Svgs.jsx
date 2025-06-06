@@ -2,17 +2,22 @@ import React from 'react'
 
 const Svgs= () => {
   const skills = [
-  [{ name: "React" }, { level: 90 }],
-  [{ name: "WebGL" }, { level: 80 }],
+  { name: "React",level:97 },
+  { name: "Node.js",level: 70 },
+  { name: "Next.js",level: 100 },
+  { name: "Mongo DB",level: 80 },
+  { name: "JavaScript",level: 100 },
+  { name: "WebGL",level: 80 },
+  { name: "Three Js",level: 60 },
 ];
     
   return (
-    <div className=' min-w-full flex gap-5 flex-col'>
+    <div className=' min-w-full flex flex-col'>
         {/* about */}
         <svg
           id="about-svg-header"
           className="w-full h-auto"
-          viewBox="0 0 520 180"
+          viewBox="0 0 500 180"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -132,7 +137,7 @@ const Svgs= () => {
 
         {/* skills */}
 
-        <svg viewBox="0 0 500 450" className="w-full h-auto">
+        <svg viewBox="0 0 500 380" className="w-full h-auto">
             {/* Frame */}
             <polyline
               points="250,35 200,35 200,10 190,0 10,0 0,10 0,330 10,340 197,340 215,358 215,370 250,370 400,370 410,360 490,360 500,350 500,55 490,45 310,45 300,35"
@@ -157,7 +162,7 @@ const Svgs= () => {
             <rect
               x="0"
               y="0"
-              height="57"
+              height="47"
               width="500"
               fill="#00b7ff"
               opacity=".15"
@@ -171,21 +176,28 @@ const Svgs= () => {
             x="0"
             y="60"
             width="500"
-            height="230"
-            margin="0 0 10px 0"
+            height="280"
+            margin="0 0 0px 0"
           >
-            <div className="flex flex-col gap-3 p-4 bg-transparent text-blue-400 font-medium">
+            <div className="flex flex-col bg-transparent text-blue-400 font-medium">
               {skills.map((skill, index) => (
-                <div key={index} className="flex items-center  gap-4">
-                  <span className="w-1/3">{skill.name}</span>
-                  <div className="w-full h-2 bg-white bg-opacity-20 ">
-                    <div
-                      className="h-2 bg-blue-500 "
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
+  <div
+    key={index}
+    className={`w-full ${
+      index % 2 === 0 ? "" : "bg-blue-500/10"
+    }`}
+  >
+    <div className="flex items-center h-10 w-[90%] mx-auto gap-4">
+      <span className="w-1/3">{skill.name}</span>
+      <div className="w-full h-2 bg-white bg-opacity-20">
+        <div
+          className="h-2 bg-blue-500"
+          style={{ width: `${skill.level}%` }}
+        ></div>
+      </div>
+    </div>
+  </div>
+))}
             </div>
           </foreignObject>
 
@@ -196,7 +208,7 @@ const Svgs= () => {
         {/* about */}
       <svg
       className="max-w-full "
-      viewBox="0 0 500 370"
+      viewBox="0 0 500 380"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
