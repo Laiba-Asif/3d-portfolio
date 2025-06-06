@@ -1,6 +1,10 @@
 import React from 'react'
 
 const Svgs= () => {
+  const skills = [
+  [{ name: "React" }, { level: 90 }],
+  [{ name: "WebGL" }, { level: 80 }],
+];
     
   return (
     <div className=' min-w-full flex gap-5 flex-col'>
@@ -127,41 +131,43 @@ const Svgs= () => {
         </svg>
 
         {/* skills */}
-        {/* <svg viewBox="0 0 500 300" className="w-full h-auto">
-          
-          <polyline
-            points="250,35 200,35 200,10 190,0 10,0 0,10 0,245 10,255 197,255 215,273 215,290 250,290 400,290 410,280 490,280 500,270 500,55 490,45 310,45 300,35"
-            fill="none"
-            stroke="#00b7ff"
-            opacity="0.2"
-          />
 
-          <polyline
-            points="250,35 200,35 200,10 190,0 10,0 0,10 0,245 10,255 197,255 215,273 215,290 250,290"
-            fill="none"
-            stroke="#00b7ff"
-            strokeWidth="2"
-          />
-          <polyline
-            points="250,35 300,35 310,45 490,45 500,55 500,270 490,280 410,280 400,290 250,290"
-            fill="none"
-            stroke="#00b7ff"
-            strokeWidth="2"
-          />
+        <svg viewBox="0 0 500 450" className="w-full h-auto">
+            {/* Frame */}
+            <polyline
+              points="250,35 200,35 200,10 190,0 10,0 0,10 0,330 10,340 197,340 215,358 215,370 250,370 400,370 410,360 490,360 500,350 500,55 490,45 310,45 300,35"
+              fill="none"
+              stroke="#00b7ff"
+              opacity="0.2"
+            />
+            <polyline
+              points="250,35 200,35 200,10 190,0 10,0 0,10 0,330 10,340 197,340 215,358 215,370 250,370"
+              fill="none"
+              stroke="#00b7ff"
+              strokeWidth="2"
+            />
+            <polyline
+              points="250,35 300,35 310,45 490,45 500,55 500,350 490,360 410,360 400,370 250,370"
+              fill="none"
+              stroke="#00b7ff"
+              strokeWidth="2"
+            />
 
-          <rect
-            x="0"
-            y="0"
-            width="500"
-            height="47"
-            fill="#00b7ff"
-            opacity="0.15"
-          />
-          <text x="71" y="25" fill="white" fontSize="18" fontWeight="bold">
-            SKILLS
-          </text>
+            {/* Header Section */}
+            <rect
+              x="0"
+              y="0"
+              height="57"
+              width="500"
+              fill="#00b7ff"
+              opacity=".15"
+              mask="url(#about-header-mask)"
+            ></rect>
+            <text x="30" y="25" fill="white" fontSize="18" fontWeight="bold">
+              Skills
+            </text>
 
-          <foreignObject
+            <foreignObject
             x="0"
             y="60"
             width="500"
@@ -182,7 +188,9 @@ const Svgs= () => {
               ))}
             </div>
           </foreignObject>
-        </svg> */}
+
+            
+          </svg>
 
 
         {/* about */}
