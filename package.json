@@ -9,10 +9,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.0.3",
     "@react-three/fiber": "^9.0.4",
+    "@tailwindcss/vite": "^4.1.7",
+    "autoprefixer": "^10.4.21",
+    "emailjs": "^4.0.3",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^12.12.1",
+    "gsap": "^3.13.0",
+    "leva": "^0.10.0",
+    "lucide-react": "^0.513.0",
+    "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.6.1",
+    "sonner": "^2.0.3",
+    "tailwindcss": "^4.1.7",
     "three": "^0.173.0"
   },
   "devDependencies": {

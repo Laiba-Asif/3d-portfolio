@@ -1,12 +1,37 @@
-import { Canvas } from "@react-three/fiber";
-import { Experience } from "./components/Experience";
+import React, { useState, useEffect } from "react";
+import { Toaster } from 'sonner';
+// import Loader  from "./components/Loader";
+import MyRoutes from "./routes";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const preloader = document.getElementById('preloader');
+  if (preloader) {
+  preloader.remove();}
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+
+    }, 3000); // 3 seconds delay
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <Canvas shadows camera={{ position: [3, 3, 3], fov: 30 }}>
-      <color attach="background" args={["#ececec"]} />
-      <Experience />
-    </Canvas>
+    <div  >
+
+      {/* {isLoading ? (
+        <Loader />
+      ) : ( */}
+        <>
+        <MyRoutes/>
+        
+        {/* <Toaster richColors position="top-right" /> */}
+        </>
+      {/* ) */}
+      {/* } */}
+    </div>
   );
 }
 
