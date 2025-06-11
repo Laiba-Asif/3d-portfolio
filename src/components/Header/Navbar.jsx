@@ -75,7 +75,7 @@ const Navbar = () => {
   const toggleNav = () => setNavOpen((prev) => !prev);
 
   return (
-    <div className=" fixed top-0 left-0 z-40  w-full h-screen overflow-hidden ">
+    <div className=" fixed top-0 left-0 z-30  w-full h-screen overflow-hidden ">
       {/* mr peabody */}
       <img
         src="/images/mr-peabody.png"

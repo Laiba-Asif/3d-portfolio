@@ -70,7 +70,7 @@ export default function ContactForm() {
 
   return (
     <section className="p-5 md:
-    pl-30 md:p-0 relative">
+    pl-30 md:p-0 relative z-50">
       {/* ... your header bars and SVG frame remain the same */}
 
       <div className="min-h-full md:[width:92rem] md:[max-width:calc(100%-60px)] flex items-center justify-start md:px-6 md:pl-8 md:ml-8 py-16 md:py-28">
