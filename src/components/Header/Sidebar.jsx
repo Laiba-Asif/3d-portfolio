@@ -9,7 +9,7 @@ const Sidebar = () => {
   { icon: <Github size={20} />, href: "https://github.com" },
 ];
   return (
-      <div className="absolute left-0 bottom-20 hidden md:flex flex-col gap-12 items-center space-y-6 z-30">
+      <div className="absolute left-5 bottom-20 hidden md:flex flex-col gap-12 items-center space-y-6 z-30">
         <motion.div
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "10rem", opacity: 1 }}

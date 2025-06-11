@@ -1,34 +1,39 @@
-import { OrbitControls, Text3D } from '@react-three/drei'
+import React, { useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
-import React from 'react'
+import { OrbitControls, Text3D, useGLTF, useAnimations, Environment } from '@react-three/drei'
 import {Avatar} from './Avatar'
+
+
 
 const ContactExperience = () => {
   return (
-    <Canvas className='h-full w-full'
-    camra={{position: [0, 0, 5]}}>
-        <ambientLight intensity={2}/>
-            <directionalLight position={[-5 ,5 ,5]} intensity={2} />
+    <Canvas className="h-full w-full" camera={{ position: [0, 0, 5] }}>
+      <ambientLight intensity={2} />
+        <directionalLight position={[-2,0,3]} intensity={3} color={"#ff28d5"} />
+        <directionalLight position={[2,0,3]} intensity={3} color={"#1c34ff"} />
+        {/* <Environment preset="city" /> */}
+      {/* <OrbitControls /> */}
 
-        <group scale={[2, 2, 2]}>
-            <Text3D position={[-3.5, -2.5 ,-4]}
-               curveSegments= {32}
-               bevelEnabled={true}
-               bevelSize={0.04}
-               bevelThickness={0.1}
-               height={0.5}
-               lineHeight={0.5}
-               letterSpacing={-0.05}
-               size={1.5}
-               font='/fonts/pirata.json'
-            >
-                {`Hey`}
-                <meshNormalMaterial />
-                {/* <OrbitControls/> */}
-            </Text3D>
-            <Avatar scale={2} position={[0 ,-2,0]}/>
-        </group>
-      
+      <group scale={[2, 2, 2]}>
+        <Text3D
+          position={[0, -2, -4]}
+          curveSegments={32}
+          bevelEnabled={true}
+          bevelSize={0.04}
+          bevelThickness={0.1}
+          height={0.5}
+          lineHeight={0.7}
+          letterSpacing={-0.05}
+          size={1.5}
+          font="/fonts/pirata.json"
+        >
+          {`Hey \n There`}
+          <meshNormalMaterial />
+        </Text3D>
+
+        {/* <Globe position={[0, 0.2,0]} scale={0.6} /> */}
+        <Avatar scale={2} position={[0, -2, 0]} />
+      </group>
     </Canvas>
   )
 }

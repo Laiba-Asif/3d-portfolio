@@ -7,6 +7,16 @@ export default function ContactForm() {
   const formRef = useRef(null);
   const [errors, setErrors] = useState({});
 
+/**
+ * Validates the input fields for the contact form.
+ * 
+ * @param {string} name - The name entered in the form.
+ * @param {string} email - The email entered in the form.
+ * @param {string} message - The message entered in the form.
+ * @returns {Object} An object containing error messages for each invalid field.
+ * If a field is valid, it will not be included in the returned object.
+ */
+
   const validate = (name, email, message) => {
     const newErrors = {};
     if (!name) newErrors.name = "Please enter your name";
@@ -59,7 +69,8 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="p-5 md:p-0 relative">
+    <section className="p-5 md:
+    pl-30 md:p-0 relative">
       {/* ... your header bars and SVG frame remain the same */}
 
       <div className="min-h-full md:[width:92rem] md:[max-width:calc(100%-60px)] flex items-center justify-start md:px-6 md:pl-8 md:ml-8 py-16 md:py-28">
@@ -223,9 +234,9 @@ export default function ContactForm() {
         </div>
 
         <div className="absolute right-0 bottom-0 w-[700px] h-[600px]">
-          {/* <div className="flex justify-end items-center w-full h-full">
+          <div className="flex justify-end items-center w-full h-full">
           <ContactExperience />
-        </div> */}
+        </div>
         </div>
       </div>
     </section>

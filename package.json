@@ -12,6 +12,7 @@
     "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.0.3",
     "@react-three/fiber": "^9.0.4",
+    "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.1.7",
     "autoprefixer": "^10.4.21",
     "emailjs": "^4.0.3",
@@ -25,6 +26,7 @@
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.6.1",
     "sonner": "^2.0.3",
+    "swiper": "^11.2.8",
     "tailwindcss": "^4.1.7",
     "three": "^0.173.0"
   },

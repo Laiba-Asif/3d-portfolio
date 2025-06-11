@@ -1,10 +1,11 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import gsap from "gsap";
 
-import { Twitter, Linkedin, Github, Instagram, Volume2, VolumeX } from "lucide-react";
+import { Twitter, Linkedin, Github, Instagram } from "lucide-react";
 import Sidebar from "./Sidebar";
-
+import { navLinks } from "../../constants";
+import { useGSAP } from "@gsap/react";
 
 const socialLinks = [
   { icon: <Instagram size={20} />, href: "https://facebook.com" },
@@ -13,78 +14,90 @@ const socialLinks = [
   { icon: <Github size={20} />, href: "https://github.com" },
 ];
 
-const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#contact", label: "Contact" },
-];
-
 const Navbar = () => {
+  useGSAP(() => {
+    const tl = gsap.timeline({ delay: 0.5 });
+
+    tl.set([".bar-top", ".bar-middle", ".bar-bottom"], {
+      width: "10rem", // Start expanded
+    })
+
+      .to(".hamburger", {
+        x: "50vw", // Move to center
+        duration: 1.5,
+        ease: "power2.inOut",
+      })
+
+      .to(".hamburger", {
+        x: "85vw", // Move to right while still wide
+        duration: 1.5,
+        ease: "power2.inOut",
+      })
+      .to(".hamburger", {
+        x: "85vw", // Move to right while still wide
+        duration: 1.5,
+        ease: "power2.inOut",
+      })
+
+      .to(
+        ".bar-top",
+        {
+          width: "2.5rem",
+          duration: 0.4,
+          ease: "power1.inOut",
+        },
+        "<"
+      ) // shrink after full move
+
+      .to(
+        ".bar-middle",
+        {
+          width: "2rem",
+          duration: 0.4,
+          ease: "power1.inOut",
+        },
+        "<"
+      )
+
+      .to(
+        ".bar-bottom",
+        {
+          width: "1.25rem",
+          duration: 0.4,
+          ease: "power1.inOut",
+        },
+        "<"
+      );
+  }, []);
+
   const [navOpen, setNavOpen] = useState(false);
-  const [soundOn, setSoundOn] = useState(true);
 
   const toggleNav = () => setNavOpen((prev) => !prev);
-  const toggleSound = () => setSoundOn((prev) => !prev);
-
-  // Bar animation variants
-  const topBarVariants = {
-    closed: { rotate: 0, y: 0 },
-    open: { rotate: 45, y: 8 },
-  };
-  const middleBarVariants = {
-    closed: { opacity: 1 },
-    open: { opacity: 0 },
-  };
-  const bottomBarVariants = {
-    closed: { rotate: 0, y: 0 },
-    open: { rotate: -45, y: -8 },
-  };
 
   return (
-    <div className="w-full h-full absolute z-50">
-
-<Sidebar/>
-      
+    <div className=" fixed top-0 left-0 z-40  w-full h-screen overflow-hidden ">
+      {/* mr peabody */}
+      <img
+        src="/images/mr-peabody.png"
+        alt="mr peabody"
+        className=" h-[10rem] absolute top-0 pointer-events-none left-0"
+      />
+      <Sidebar />
 
       {/* Buttons container */}
-      <div className="flex space-x-4 p-4 items-center absolute right-10 top-10">
-        {/* Sound toggle button */}
-        <button
-          onClick={toggleSound}
-          aria-label="Toggle Sound"
-          className="p-2 rounded-md bg-[#ff28d5]/60 hover:bg-blue-900 text-white transition z-50 max-md:hidden"
-        >
-          {soundOn ? <Volume2 size={24} /> : <VolumeX size={24} />}
-        </button>
-
-        {/* Hamburger toggle button with 3 bars */}
-        
-
-        <button
-          onClick={toggleNav}
-          aria-label={navOpen ? "Close navigation menu" : "Open navigation menu"}
-          className=" flex flex-col justify-center items-center w-10 h-10 gap-[6px] bg-[#1c34ff] hover:bg-blue-900 rounded-md  transition z-50"
-        >
-          <motion.span
-            className="block w-6 h-[2px] bg-white origin-center"
-            variants={topBarVariants}
-            animate={navOpen ? "open" : "closed"}
-            transition={{ duration: 0.3 }}
-          />
-          <motion.span
-            className="block w-6 h-[2px] bg-white origin-center"
-            variants={middleBarVariants}
-            animate={navOpen ? "open" : "closed"}
-            transition={{ duration: 0.3 }}
-          />
-          <motion.span
-            className="block w-6 h-[2px] bg-white origin-center"
-            variants={bottomBarVariants}
-            animate={navOpen ? "open" : "closed"}
-            transition={{ duration: 0.3 }}
-          />
-        </button>
+      <div
+        className="flex flex-col items-end gap-1 hamburger z-[999]  absolute top-10 left-0"
+        onClick={toggleNav}
+      >
+        <div className="bar-top h-2 bg-white" style={{ width: "2.5rem" }}></div>
+        <div
+          className="bar-middle h-2 bg-white"
+          style={{ width: "2rem" }}
+        ></div>
+        <div
+          className="bar-bottom h-2 bg-white"
+          style={{ width: "1.25rem" }}
+        ></div>
       </div>
 
       {/* Fullscreen nav menu */}
@@ -92,7 +105,7 @@ const Navbar = () => {
         initial={{ opacity: 0, y: "-100%" }}
         animate={navOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: "-100%" }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`fixed top-0 left-0 w-full h-full bg-gray-900 flex flex-col justify-center items-center space-y-8 z-40`}
+        className={`fixed top-0 left-0 w-full h-full bg-gray-900  flex flex-col justify-center items-center space-y-8 z-50`}
       >
         {navLinks.map(({ href, label }) => (
           <a
@@ -105,30 +118,21 @@ const Navbar = () => {
           </a>
         ))}
 
-        <div className="max-md:flex md:hidden items-center justify-between w-[70%] absolute bottom-20">
-            <div className="flex items-center justify-center gap-8">
-
-             {socialLinks.map(({ icon, href }, idx) => (
-            <a
-              key={idx}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/90 hover:text-blue-400 transition cursor-pointer"
-            >
-              {icon}
-            </a>
-          ))}
-            </div>
-            <div>
-                  <button
-          onClick={toggleSound}
-          aria-label="Toggle Sound"
-          className="p-2 rounded-md bg-gray-800 text-white hover:bg-gray-700 transition z-50"
-        >
-          {soundOn ? <Volume2 size={24} /> : <VolumeX size={24} />}
-        </button>
-            </div>
+        <div className="max-md:flex md:hidden items-center justify-between w-[70%] z-[999] absolute bottom-20">
+          <div className="flex items-center justify-center gap-8">
+            {socialLinks.map(({ icon, href }, idx) => (
+              <a
+                key={idx}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/90 hover:text-blue-400 transition cursor-pointer"
+              >
+                {icon}
+              </a>
+            ))}
+          </div>
+          <div></div>
         </div>
       </motion.nav>
     </div>
