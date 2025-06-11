@@ -1,7 +1,6 @@
 
 import React from "react";
 import GradientSphere from "../GradientSpheres";
-import TrailContainer from "../helpers/TrailContainer";
 import Svgs from "../helpers/Svgs";
 
 const About = () => {
@@ -23,7 +22,7 @@ const About = () => {
         </div>
 
         {/* RIGHT: Stays visible while user scrolls */}
-        <div className="hidden md:flex w-[55%] sticky top-0 h-screen items-center justify-center ">
+        <div className="hidden md:flex w-[55%] sticky top-0 h-screen items-center justify-center  ">
           <svg
             width="420"
             height="500"
@@ -66,8 +65,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Trail section below */}
-      <TrailContainer />
+
     </section>
   );
 };

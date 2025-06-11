@@ -235,7 +235,7 @@ const TrailContainer = () => {
     }
   }, [])
 
-  return <div ref={trailContainerRef} className="absolute top-0 w-full h-full overflow-hidden z-10" />
+  return <div ref={trailContainerRef} className="absolute top-0 w-full h-full overflow-hidden z-[10]" />
 }
 
 export default TrailContainer
