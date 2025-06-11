@@ -106,7 +106,7 @@ const Hero = () => {
           id="home"
           className="home-bg  h-screen relative px-5 max-md:px-0 bg-[#0b0620] "
         >
-          <div className="reveal-mask absolute w-full z-50 h-full top-0 left-0 bg-[#0b0620]  pointer-events-none"></div>
+          <div className="reveal-mask absolute w-full z-30 h-full top-0 left-0 bg-[#0b0620]  pointer-events-none"></div>
           <GradientSphere
             sphere1class={"gradient-sphere sphere-1"}
             sphere2class={"gradient-sphere sphere-2 "}
