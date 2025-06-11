@@ -45,18 +45,19 @@ const Hero = () => {
         ".reveal-mask",
         {
           transformOrigin: "100% 0%", // bottom right
+          delay: 1.5,
           rotate: 0,
-          scaleY: 3,
+          scaleY: 4,
         },
         {
           rotate: 90, // sweep up toward top left
-          duration: 1.8,
+          duration: 2.2,
           ease: "power4.inOut",
           onComplete: () => {
             gsap.set(".reveal-mask", { display: "none" });
           },
         },
-        "-=1"
+        // "-=1"
       );
 
       tl.fromTo(".hero-text", { opacity: 0 ,x:100}, {x:0, opacity: 1, duration: 1 });
@@ -105,7 +106,7 @@ const Hero = () => {
           id="home"
           className="home-bg  h-screen relative px-5 max-md:px-0 bg-[#0b0620] "
         >
-          <div className="reveal-mask absolute w-full h-full top-0 left-0 bg-[#0b0620]  pointer-events-none"></div>
+          <div className="reveal-mask absolute w-full z-50 h-full top-0 left-0 bg-[#0b0620]  pointer-events-none"></div>
           <GradientSphere
             sphere1class={"gradient-sphere sphere-1"}
             sphere2class={"gradient-sphere sphere-2 "}
