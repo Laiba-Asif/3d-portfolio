@@ -57,7 +57,7 @@ const Hero = () => {
             gsap.set(".reveal-mask", { display: "none" });
           },
         },
-        // "-=1"
+        "-=1.2"
       );
 
       tl.fromTo(".hero-text", { opacity: 0 ,x:100}, {x:0, opacity: 1, duration: 1 });
@@ -71,7 +71,7 @@ const Hero = () => {
     <div className="relative">
       
       
-      <div className="svg flex items-center justify-center fixed top-0 left-0 z-10  bg-[#0b0620] w-full h-screen overflow-hidden ">
+      <div className="svg flex items-center justify-center fixed top-0 left-0 z-20  bg-[#0b0620] w-full h-screen overflow-hidden ">
         <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
           <defs>
             <mask id="viMask">
