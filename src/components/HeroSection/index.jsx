@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import GradientSphere from "../GradientSpheres";
 import HeroExperience from "./HeroExperience";
-import TrailContainer from "../helpers/TrailContainer";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -116,19 +115,15 @@ const Hero = () => {
             <div className="container relative w-full h-full ">
               <div className="md:mt-40 mt-32 relative ml-20 z-20 blackops hero-text ">
                 <h1 className="font-bold md:text-9xl text-5xl ">LAIBA ASIF</h1>
-                <h1 className="font-bold md:text-9xl text-5xl ">FRONTEND</h1>
+                <h1 className="font-bold md:text-9xl text-5xl ">MERN Stack</h1>
               </div>
 
               <div className="absolute w-full z-30 bottom-20 right-0 blackops">
                 <div className="flex justify-between items-end">
-                  {/* <div className='flex flex-col items-center md:gap-5 gap-1 '>
-                <p className='md:text-base text-xs'>Explore</p>
-                <img className='size-7 animate-bounce' src="/images/arrowdown.svg" alt="arrowdown" />
-              </div> */}
+                  
                   <div></div>
                   <div className="flex flex-col items-end">
-                    {/* <img src="/images/shape.svg" alt="shape" /> */}
-                    <h1 className="font-bold md:text-9xl text-5xl">
+                    <h1 className="font-bold md:text-9xl text-5xl z-0">
                       DEVELOPER
                     </h1>
                   </div>
@@ -136,7 +131,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <TrailContainer />
           <div className="w-full min-h-[100vh] absolute inset-0 z-20">
             <HeroExperience />
           </div>
