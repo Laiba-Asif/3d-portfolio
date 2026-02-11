@@ -61,7 +61,7 @@ const Svgs = () => {
           className="h-[13rem] "
           x="2"
           mask="url(#about-profil-picture-mask)"
-          style={{ imageRendering: "optimizeSpeed" }}
+          style={{ imageRendering: "optimizeSpeed" as any }}
         />
 
         {/* Profile Picture Animated Gradient */}
@@ -172,7 +172,7 @@ const Svgs = () => {
           Skills
         </text>
 
-        <foreignObject x="0" y="60" width="500" height="280" margin="0 0 0px 0">
+        <foreignObject x="0" y="60" width="500" height="280" >
           <div className="flex flex-col bg-transparent text-blue-400 font-medium">
             {skills.map((skill, index) => (
               <div

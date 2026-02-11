@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import React, { useRef, useEffect, useState } from "react";
-import { motion, useAnimation } from "motion/react";
+import { motion, useAnimation } from "framer-motion";
 
 interface ScratchToRevealProps {
   children: React.ReactNode;

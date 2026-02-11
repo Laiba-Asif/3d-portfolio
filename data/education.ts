@@ -8,6 +8,7 @@ export const events= [
     description: 'Matriculation',
     icon: 'School',
     details: 'Marks: 1014 / 1100 Percentage:92%',
+    link:""
   },  {
     id: 3,
     year: '2019 - 2021',
@@ -15,6 +16,7 @@ export const events= [
     description: 'Intermediate',
     icon: 'GraduationCap',
     details: 'Marks: 998 / 1100 Percentage:90.7%',
+    link:""
   },
   {
     id: 5,
@@ -23,6 +25,7 @@ export const events= [
     description: 'ADP degree in Artificial Intelligence',
     icon: 'Laptop',
     details: 'Current CGPA : 3.65 / 4.0',
+    link:""
   },
    {
     id: 7,
@@ -31,5 +34,6 @@ export const events= [
     description: 'Bachelor\'s degree in Software Engineering',
     icon: 'Laptop',
     details: 'Current CGPA : 3.41 / 4.0',
+    link:""
   },
 ]
