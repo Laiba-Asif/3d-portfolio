@@ -1,7 +1,9 @@
 
 export const projects = [
  
-  {
+
+
+   {
     title: "FYP - Job Portal With AI Resume Ranking",
     description: "AI-Powered job portal with resume ranking and job matching features",
     fullDescription:
@@ -26,6 +28,20 @@ AI & NLP: PyMuPDF, SpaCy, BERT-based semantic similarity model`,
     category: "ai",
    motivation:"",
    lessonLearnt:""
+  },
+  {
+    title: "Instagram Clone",
+    description: "Instagram clone built with React ,PostgreSQL and Tanstack Query.",
+    fullDescription:
+      `An Instagram clone built with React, PostgreSQL, and Tanstack Query. The application features user authentication, photos and videos sharing via cloudinary, liking and commenting on posts and editing your own comments , following and unfollowing other users, and a responsive design. The backend is powered by Node.js and Express, with PostgreSQL for data storage and TypeOrm for object-relational mapping. Tanstack Query is used for efficient data fetching and state management on the frontend.
+      Redis BullMQ is used for handling background jobs such as sending notifications and scheduling posts and for stories to be removed after 24 hours. Cloudinary is used for processing media uploads, ensuring a smooth user experience. This project demonstrates my ability to build a full-stack social media application with real-time features and efficient data management.`,
+    imageUrl: "/projects/instagram-clone.png",
+    techStack: ["React", "TypeScript", "TailwindCSS", "Next.js", "PostgreSQL", "Tanstack Query","TypeScript", "Node.js", "Express", "Redis BullMQ", "Cloudinary"],
+    githubUrl: "https://github.com/Laiba-Asif/instagram-Clone",
+    deployedUrl: "",
+    category: "web",
+   motivation:"This project gave me the opportunity to build a complex social media application with real-time features and efficient data management. It allowed me to work with a variety of technologies and gain experience in building scalable web applications.",
+   lessonLearnt:"At first i was so comfortble with MongoDB and mongoose but this project forced me to learn SQL and relational databases and i really enjoyed working with PostgreSQL and TypeOrm. I also learned how to use Redis BullMQ for handling background jobs and scheduling tasks, which was a new experience for me."
   },
   {
     title: "Black Beauty ",
