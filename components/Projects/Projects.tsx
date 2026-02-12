@@ -58,13 +58,13 @@ const ProjectsSection = () => {
         </div>
 
         {/* View All Projects Button */}
-        <div className="mt-20 text-center">
-          <Link href="/projects">
+        <div className="mt-20 text-center w-full flex justify-center items-center">
+          <Link href="/projects" className="w-full flex justify-center items-center">
             <motion.button
               type="button"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative ml-52 mt-1 w-44.5 px-6 py-3 text-lg font-semibold text-white bg-cyan-500 shadow-lg hover:bg-cyan-600"
+              className="relative mt-1 w-44.5 px-6 py-3 text-lg font-semibold text-white bg-cyan-500 shadow-lg hover:bg-cyan-600"
               style={{
                 clipPath:
                   "polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%)",

@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const CTASection = () => {
   return (
-    <section
+    <div
       id="resume"
-      className="py-24 px-4 relative overflow-hidden bg-[hsl(var(--background))] text-[hsl(var(--foreground))]"
+      className="px-4 relative overflow-hidden text-[hsl(var(--foreground))]"
     >
       {/* Animated Grid */}
       <div className="absolute inset-0 opacity-20">
@@ -23,8 +23,8 @@ const CTASection = () => {
       </div>
 
       {/* Glowing Orbs */}
-      <div className="absolute top-0 left-1/4 w-72 h-72 rounded-full blur-3xl animate-float" style={{ backgroundColor: 'hsl(var(--primary)/0.1)' }} />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-3xl animate-float" style={{ backgroundColor: 'hsl(var(--primary)/0.05)', animationDelay: "2s" }} />
+      <div className="absolute top-0 left-1/4 w-72 h-72 rounded-full blur-3xl animate-float bg-cyan-300/20"  />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-3xl animate-float bg-cyan-300/20" style={{ animationDelay: "2s" }} />
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-8">
@@ -125,7 +125,7 @@ const CTASection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

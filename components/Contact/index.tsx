@@ -4,7 +4,6 @@
 import React, { useRef, useState, FormEvent, JSX } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
-import ContactExperience from "./ContactExperience";
 import { ArrowUp, Heart } from "lucide-react";
 
 /** --------------------
@@ -306,8 +305,8 @@ export default function ContactForm(): JSX.Element {
                 © {new Date().getFullYear()} All rights reserved.
               </p>
               <p className="text-sm text-muted-foreground flex items-center gap-2">
-                Designed with <Heart className="w-4 h-4 text-primary animate-pulse" /> by{" "}
-                <span className="text-primary font-medium">Laiba Asif</span>
+                Designed with <Heart className="w-4 h-4 text-cyan-400 animate-pulse" /> by{" "}
+                <span className="text-cyan-400 font-medium">Laiba Asif</span>
               </p>
             </div>
           </div>

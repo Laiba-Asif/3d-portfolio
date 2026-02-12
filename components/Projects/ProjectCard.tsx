@@ -120,7 +120,7 @@ const ProjectCard = ({ project, index, isEven }: ProjectCardProps) => {
           {project.techStack.slice(0, 5).map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-muted-foreground"
+              className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs text-muted-foreground"
             >
               {tech}
             </span>
