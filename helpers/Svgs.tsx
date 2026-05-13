@@ -2,11 +2,11 @@ import React from "react";
 
 const Svgs = () => {
    const skills = [
+     { name: "Python", level: 50 },
     { name: "MERN", level: 97 },
     { name: "PERN", level: 70 },
     { name: "Fast API", level: 70 },
     { name: "My SQL", level: 80 },
-    { name: "Websockets", level: 50 },
     { name: "Docker", level: 60 },
     { name: "GitHub", level: 80 },
   ];
@@ -299,7 +299,7 @@ const Svgs = () => {
             Now, after professional coaching, I am looking for
           </text>
           <text x="88" y="50" className="fill-white text-sm">
-            new challenges to work as a web developer.
+            new challenges to work as an AI Engineer.
           </text>
         </g>
       </svg>

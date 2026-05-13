@@ -27,7 +27,7 @@ const allExperiences = [
   },
   {
     id: 4,
-    title: "MERN Developer",
+    title: "MERN Stack Developer",
     company: "Virtual Taps",
     period: "June, 2025 - August, 2025",
     description:
@@ -37,9 +37,9 @@ const allExperiences = [
   },
   {
     id: 5,
-    title: "Associate Software Engineer Intern",
+    title: "Associate Software Engineer ",
     company: "Wamo Labs",
-    period: "Oct, 2025 - Jan, 2026",
+    period: "May, 2025 - Feb, 2026",
     description:
       "Implemented Redis-based caching and background job processing using BullMQ to improve application performance and reliability. Built modular, reusable UI components and integrated third-party APIs, enhancing the overall user experience and maintainability.Collaborated with cross-functional teams to deliver scalable and high-performance web applications.",
     technologies: ["JavaScript", "PostgreSQL", "Frontend", "Backend","performance optimization", "Redis", "BullMQ", "API Integration"],
